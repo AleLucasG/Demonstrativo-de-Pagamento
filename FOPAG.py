@@ -18,38 +18,8 @@ if adto == 'SIM' and diasTrabMes <= 14:
     print('\033[1;31mNão recebe adto quinzenal, dias trabalhados insuficiente para pagamento \033[m')
 else:
       if adto == 'SIM' and diasTrabMes >= 15:
-        valor = (salarioBaseMes / 30) * diasTrabMes
-        print('Adiantamento quinzenal R$ {}'.format(valor))
+        valor = (((salarioBaseMes / 30) * diasTrabMes) * 40) / 100
+        print('Adiantamento quinzenal R$ {:.2f}'.format(valor))
       else:
           if adto == 'NÃO':
               print('\033[1;31mNão tem pgto adto quinzenal \033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
