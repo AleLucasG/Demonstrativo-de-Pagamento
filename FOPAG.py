@@ -8,7 +8,7 @@ nome = str(input('Funcionario: ')).strip()
 salarioBaseMes = float(input('Salario base: '))
 diasTrabMes: int = int(input('Dias trabalhado mês: '))
 dependente = int(input('Quant. Dependenete IRRF: '))
-depenSalarioFam = int(input('Quant. Dependnete Salário Fámilia até 14 anos: '))
+depenSalarioFam = int(input('Quant. Dependente Salário Fámilia até 14 anos: '))
 print('\n')
 
 """ADIANTAMENTO"""
@@ -33,14 +33,20 @@ print('\n')
 
 """INSS"""
 print('\033[1;32mDedução INSS\033[m')
-if salarioBaseMes <= 1100.00:
+if salarioBaseMes >= 0 and salarioBaseMes <= 1100.00:
     inss = (salarioBaseMes * 7.5) / 100
-elif salarioBaseMes >= 1100.01 and <= 2203.48:
-    inss = ((salarioBaseMes * 9) / 100) + 82.50
-elif salarioBaseMes >= 2203.49 and <= 3305.22:
-    inss = ((salarioBaseMes * 12) / 100) + 181.81
-elif salarioBaseMes >= 3305.23 and <= 6433.57:
-    inss = ((salarioBaseMes * 14) / 100) + 314.02
+
+elif salarioBaseMes >= 1100.01 and salarioBaseMes <= 2203.48:
+    inss = (((salarioBaseMes - 1100.00) * 9) / 100) + 82.50
+
+elif salarioBaseMes >= 2203.49 and salarioBaseMes <= 3305.22:
+    inss = (((salarioBaseMes - 2203.48) * 12) / 100) + 181.81
+
+elif salarioBaseMes >= 3305.23 and salarioBaseMes <= 6433.57:
+    inss = (((salarioBaseMes - 3305.23) * 14) / 100) + 314.02
+
 elif salarioBaseMes >= 6433.58:
     inss = 751.99
-print(''.format(inss))
+print('Desconto do INSS é de R$ {:.2f}'.format(inss))
+
+
