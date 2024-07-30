@@ -1,13 +1,12 @@
-# Demonstrativo de Pagamento
- Holerite com aplicações em Python
+<h1> Demonstrativo de Pagamento </h1>
  
-Projeto criado em Python a cada aula dada👩🏻‍💻.
+### Projeto criado em Python a cada aula dada 👩🏻‍💻.
 
-Fiz esse projeto com base na minha experência em Analista de DP Jr 😊 
-A base usada foi meu holerite/demonstrativo de pagamento/contra cheque 🤓💰💸
+> Fiz esse projeto com base na minha experência em Analista de DP Jr 😊
 
-Passos são:
+> A base usada foi meu holerite/demonstrativo de pagamento/contra cheque 🤓💰💸
 
+### Passos são:
 - Usuario insere nome completo;
 - Salario base;
 - Dias trabalhados;
@@ -19,4 +18,4 @@ Passos são:
 - Dedução IR;
 - Ao final apresenta os desconto e valor liquido do pagamento.
 
-No final foi uma experiência bem bacana e que ampliou ainda mais a minha lógica ✨💫🤩🥳
+> No final foi uma experiência bem bacana e que ampliou ainda mais a minha lógica ✨💫🤩🥳
